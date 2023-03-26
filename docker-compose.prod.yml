@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nginx:
+    image: web-app:${JOB_NAME}
+    restart: always
+    networks:
+      - front_net
+
+networks:
+  front_net:
+    external: true
+
